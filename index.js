@@ -2,22 +2,31 @@ import 'dotenv/config';
 import axios from "axios";
 import express from "express";
 
-
-import warRoutes from './routes/war.js';
-
-const app = express();
-app.use(express.json());
-
-app.use('/war', warRoutes);
+const app = express()
 
 
 app.get('/', async (req, res) => {
-  const clanTag = process.env.CLAN_TAG;
-  const headers = {
-  Authorization: `Bearer ${process.env.APIKEY}`
-  };
-  let {data} = await axios.get(`https://api.clashofclans.com/v1/clans/${clanTag.replace("#","%23")}`, {headers});
+  let {data} = await axios.get(`${process.env.ORIGIN_URL}`)
   res.send(data)
+})
+
+app.get('/war', async (req, res) => {
+  try {
+  let {data} = await axios.get(`${process.env.ORIGIN_URL}/war`)
+  res.send(data)
+  } catch(e) {res.send(e.message)}
+})
+app.get('/war/log', async (req, res) => {
+  try {
+  let {data} = await axios.get(`${process.env.ORIGIN_URL}/war/log`)
+  res.send(data)
+  } catch(e) {res.send(e.message)}
+})
+app.get('/war/liga', async (req, res) => {
+  try {
+  let {data} = await axios.get(`${process.env.ORIGIN_URL}/war/league`)
+  res.send(data)
+  } catch(e) {res.send(e)}
 })
 
 
