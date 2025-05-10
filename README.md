@@ -1,4 +1,4 @@
-# Clash of Clans API for clans route only
+# Clash of Clans API for clans status like current war and war leagues
 
 *Notes* :
 - __if you wanna deploy to vercel__
