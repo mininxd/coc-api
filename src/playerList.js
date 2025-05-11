@@ -21,7 +21,7 @@ import clanInfo from "./lib/clanInfo.js";
       <div class="list-col-grow w-full">
         <div class="text-bold flex justify-between">
         <span>${info.member[i].name}</span>
-        <span class="opacity-50 uppercase">${memberRole}</span>
+        <span class="badge badge-xs badge-outline badge-ghost uppercase">${memberRole}</span>
         </div>
         <div class="text-xs opacity-60">
          ${info.member[i].tag} - ${info.member[i].league.name} (<i class="ri-trophy-line"></i> ${info.member[i].trophies})

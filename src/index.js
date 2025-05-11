@@ -15,8 +15,37 @@ import "./swiper";
   clanBadge.src = info.badges.large;
   description.innerHTML = `${info.description}`
   totalMember.innerHTML = `${info.totalMember}/50`;
-  clanCountry.innerHTML = `${info.location.name}`
-  clanLang.innerHTML = `${info.chatLanguage.name}`
   
   
+  for(let i = 0; i < info.label.length; i++) {
+    clanLabel.innerHTML += `
+    <div class="tooltip" data-tip="${info.label[i].name}">
+      <img src="${info.label[i].iconUrls.small}" class="w-[42px] h-[42px] rounded">
+    </div>
+    `
+  }
+  
+  gridInfo.innerHTML = `
+      <div class="badge tooltip badge-xs badge-ghost badge-outline" data-tip="Clan Language"> <i class="ri-global-line"></i>
+     ${info.language}
+      </div>
+      <div class="badge tooltip badge-xs badge-ghost badge-outline" data-tip="Clan Country">  <i class="ri-flag-line"></i>
+     ${info.location.name}
+      </div>
+      <div class="badge tooltip badge-xs badge-ghost badge-outline" data-tip="Clan Type"> 
+      <i class="ri-lock-line"></i> ${info.type}
+      </div>
+      <div class="badge tooltip badge-xs badge-ghost badge-outline" data-tip="War (Win/Draw/Lose)"> 
+      <i class="ri-sword-line"></i> 
+      ${info.warWin}/${info.warTie}/${info.warLose}
+      </div>
+      <div class="badge tooltip badge-xs badge-ghost badge-outline" data-tip="War League"> 
+      <i class="ri-shield-line"></i> 
+      ${info.warLeague.name}
+      </div>
+      <div class="badge tooltip badge-xs badge-ghost badge-outline" data-tip="Capital League"> 
+      <i class="ri-home-8-line"></i> 
+      ${info.capitalLeague.name}
+      </div>
+  `
 })()

@@ -25,15 +25,18 @@
     <div class="swiper-slide" data-swiper-autoplay="2000">
       <div class="card w-96 bg-base-100 card-md shadow-sm">
         <div class="card-body">
-          <p><i class="ri-global-line"></i> <span id="clanLang"></span></p>
-          <p><i class="ri-flag-line"></i> <span id="clanCountry"></span></p>
+          <div id="clanLabel" class="flex justify-center gap-3 mb-2 pt-2">
+          </div>
+          
+        <div id="gridInfo" class="flex flex-wrap gap-2">
+        </div>
         </div>
       </div>
     </div>
     <div class="swiper-slide" data-swiper-autoplay="2000">
       <div class="card w-96 bg-base-100 card-md shadow-sm">
         <div class="card-body">
-          <h1 class="text-bold">Clan Notes :</h1>
+          <h1 class="bold">Clan Motto :</h1>
           <p id="description"></p>
         </div>
       </div>
@@ -52,7 +55,7 @@
       <h1 id="totalMember" class="btn btn-neutral text-2xl font-medium">0/0</h1>
         </div>
       
-      <ul id="playerList" class="list bg-base-300 rounded-box max-h-[600px] overflow-y-scroll shadow-md px-2 mx-2 py-2 my-5">
+      <ul id="playerList" class="list bg-base-300 rounded-box max-h-[600px] overflow-y-scroll border border-base-300 shadow-md px-2 mx-2 py-2 my-5">
       </ul>
       </div>
     </div>
@@ -63,7 +66,7 @@
           <h1 class="btn btn-neutral text-2xl font-medium">War Logs</h1>
           <h1 id="totalWarlogs" class="btn btn-neutral text-2xl font-medium">0</h1>
         </div>
-      <ul id="warLogList" class="list bg-base-300 rounded-box max-h-[600px] overflow-y-scroll shadow-md px-2 mx-2 py-2 my-5"> </ul>
+      <ul id="warLogList" class="list bg-base-300 rounded-box max-h-[600px] overflow-y-scroll border border-base-300 shadow-md px-2 mx-2 py-2 my-5"> </ul>
       </div>
     </div>
   </div>

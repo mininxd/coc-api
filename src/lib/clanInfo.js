@@ -16,12 +16,15 @@ async function clanInfo() {
       clanLevel: data.clanLevel,
       clanPoints: data.clanPoints,
       warLeague: data.warLeague,
+      warWin: data.warWins.toString(),
+      warLose: data.warLosses.toString(),
+      warTie: data.warTies.toString(),
       builderPoints: data.builderBasePoints || data.builderPoints,
       capitalPoints: data.clanCapitalPoints || data.capitalPoints,
-      capitalLeague: data.clanCapitalPoints || data.capitalLeague,
+      capitalLeague: data.capitalLeague,
       totalMember: data.members,
       member: data.memberList || data.membersList || [],
-      language: data.language?.name || data.chatLanguage?.name || ""
+      language: data.chatLanguage.name || ""
     };
 
   } catch (err) {
