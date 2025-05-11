@@ -1,24 +1,22 @@
 {
-  "name": "coc",
-  "version": "1.0.0",
-  "description": "video generator web ui using google veo 2.0 or newer if there has updates",
-  "homepage": "https://github.com/mininxd/coc-api#readme",
-  "bugs": {
-    "url": "https://github.com/mininxd/coc-api/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mininxd/coc-api.git"
-  },
-  "license": "ISC",
-  "author": "",
+  "name": "clashOfclans-Dashboard",
+  "private": true,
+  "version": "0.0.0",
   "type": "module",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "daisyui": "^5.0.35",
+    "vite": "^6.3.5"
   },
   "dependencies": {
+    "@tailwindcss/vite": "^4.1.6",
     "axios": "^1.9.0",
-    "dotenv": "^16.5.0"
+    "remixicon": "^4.6.0",
+    "swiper": "^11.2.6",
+    "tailwindcss": "^4.1.6"
   }
 }
