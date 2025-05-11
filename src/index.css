@@ -10,9 +10,33 @@ html {
 *::-webkit-scrollbar {
   display: none;
 }
-.bold {
+.text-medium {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
+  font-style: normal;
+}
+.text-semi-bold {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+.text-bold {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+.text-extra-bold {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+.text-black {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
   font-style: normal;
 }

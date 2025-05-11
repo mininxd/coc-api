@@ -19,7 +19,7 @@ import clanInfo from "./lib/clanInfo.js";
       ${info.member[i].league.iconUrls.small}"
       class="w-[32px] h-[32px] mr-3">
       <div class="list-col-grow w-full">
-        <div class="text-bold flex justify-between">
+        <div class="text-medium flex justify-between">
         <span>${info.member[i].name}</span>
         <span class="badge badge-xs badge-outline badge-ghost uppercase">${memberRole}</span>
         </div>

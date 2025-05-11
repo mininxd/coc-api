@@ -26,15 +26,13 @@ import { logs } from "./lib/warInfo.js";
     
     
   warLogList.innerHTML += `
-  <div class="flex bg-base-100 shadow-sm rounded-box ${result} ${hideUndefinedOpponent} my-1">
+  <div class="flex justify-between bg-base-100 shadow-sm rounded-box ${result} ${hideUndefinedOpponent} my-1 p-2">
   
-    <li class="py-5">
-      <img src="${info.items[i].clan.badgeUrls.medium}" class="w-[36px] h-[36px] ml-2">
-    </li>
-    
-    <li class="list-row w-[50%]">
+  <div class="w-full flex justify-start">
+   <img src="${info.items[i].clan.badgeUrls.medium}" class="w-[32px] h-[32px] mt-2">
+    <li class="list-row">
     <div class="list-col-grow">
-      <div class="text-bold bold ${textColor}">
+      <div class="text-medium ${textColor}">
         ${info.items[i].clan.name}
       </div>
       <div class="text-xs ${textColor} opacity-60">
@@ -42,10 +40,12 @@ import { logs } from "./lib/warInfo.js";
       </div>
     </div>
     </li>
+    </div>
     
-    <li class="list-row w-[50%]">
+  <div class="w-full flex justify-end">
+    <li class="list-row">
       <div class="list-col-grow">
-        <div class="text-bold bold ${textColor} text-right">
+        <div class="text-medium ${textColor} text-right">
         ${info.items[i].opponent.name}
         </div>
       <div class="text-xs text-right ${textColor} opacity-60">
@@ -53,11 +53,10 @@ import { logs } from "./lib/warInfo.js";
         <i class="ri-sword-fill"></i>         ${info.items[i].opponent.destructionPercentage}%
       </div>
     </li>
+      <img src="${info.items[i].opponent.badgeUrls.medium}" class="w-[32px] h-[32px] mt-2">
+    </div>
+  
     
-
-    <li class="py-5 mr-2">
-      <img src="${info.items[i].opponent.badgeUrls.medium}" class="w-[36px] h-[36px] mr-2">
-    </li>
   </div>
 `
   }
