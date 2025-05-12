@@ -16,6 +16,8 @@ async function ongoingWar() {
       opponentBadge: data.opponent.badgeUrls,
       clanStars: data.clan.stars,
       opponentStars: data.opponent.stars,
+      clanDestruction: data.clan.destructionPercentage,
+      opponentDestruction: data.opponent.destructionPercentage,
       clanAttacks: data.clan.attacks,
       opponentAttacks: data.opponent.attacks,
       clanMember: data.clan.members,
