@@ -17,7 +17,7 @@ let state = info.state;
  }
  
  let clanName = info.clanName;
- let opponentName = info.clanName;
+ let opponentName = info.opponentName;
  
  if(clanName == undefined) {
    clanName = ""
