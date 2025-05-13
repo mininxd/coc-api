@@ -12,6 +12,16 @@ let state = info.state;
    state = "in war";
  } else if(info.state == "notInWar") {
    state = "not war"
+ } else if(info.state == "warEnded") {
+   state = "war ended"
+ }
+ 
+ let clanName = info.clanName;
+ let opponentName = info.clanName;
+ 
+ if(clanName == undefined) {
+   clanName = ""
+   opponentName = ""
  }
  
   ongoingWarState.innerHTML = state;
@@ -21,7 +31,7 @@ let state = info.state;
       <img src="${info.clanBadge.small}" class="w-[32px] h-[32px]" alt="Clan Badge">
       <div class="list-row">
         <div class="list-col-grow">
-          ${info.clanName}
+          ${clanName}
           <div class="text-xs flex gap-1 mt-1">
             <div class="tooltip" data-tip="total stars">
               <i class="ri-star-line"></i> ${info.clanStars}
@@ -42,7 +52,7 @@ let state = info.state;
     <div class="flex items-center gap-2">
       <div class="list-row text-right">
         <div class="list-col-grow">
-          ${info.opponentName}
+          ${opponentName}
           <div class="text-xs flex gap-1 justify-end mt-1">
             <div class="tooltip" data-tip="total stars">
               <i class="ri-star-line"></i> ${info.opponentStars}
