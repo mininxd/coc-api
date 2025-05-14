@@ -72,6 +72,14 @@ let state = info.state;
     </div>
   </div>
 `;
+
+ongoingWarProgress.innerHTML = `
+  <div class="w-full h-2 flex rounded overflow-hidden">
+    <div class="bg-success" style="width: calc(${info.clanDestruction} / (${info.clanDestruction} + ${info.opponentDestruction}) * 100%)"></div>
+    <div class="bg-error" style="width: calc(${info.opponentDestruction} / (${info.clanDestruction} + ${info.opponentDestruction}) * 100%)"></div>
+  </div>
+`;
+
   
 for (let i = 0; i < info.clanMember.length; i++) {
   let clanMemberStars = 0;
@@ -103,7 +111,9 @@ for (let i = 0; i < info.clanMember.length; i++) {
     <div class="flex justify-start gap-2">
       <div class="font-medium list-row w-full">
         <div>
-          <div class="text-lg">${info.clanMember[i].name}</div>
+         <span class="opacity-60 text-xs">${info.clanMember[i].tag}</span>
+          <div class="text-lg">${info.clanMember[i].name} 
+          </div>
           <div class="flex text-xs font-normal">
           <span class="mx-1">
             <i class="ri-star-line"></i>
@@ -125,6 +135,7 @@ for (let i = 0; i < info.clanMember.length; i++) {
     <div class="flex justify-end">
       <div class="font-medium text-right list-row w-full">
         <div>
+        <span class="opacity-60 text-xs">${info.opponentMember[i].tag}</span>
           <div class="text-lg">${info.opponentMember[i].name}</div>
           <div class="text-xs font-normal">
           <span class="mx-1">

@@ -5,14 +5,16 @@ import clanInfo from "./lib/clanInfo.js";
   const info = await clanInfo();
   
   
-  for(let i = 0; i < info.member.length; i++ ) {
-  let memberRole = "member";
-  if(info.member[i].role == "leader") { memberRole = "leader" } else if(info.member[i].role == "coLeader") {
-    memberRole = "co leader" 
-  } else if(info.member[i].role == "admin") {
-    memberRole = "elder"
-  }
-  
+  for (let i = 0; i < info.member.length; i++) {
+  const roleMap = {
+    leader: "leader",
+    coLeader: "co leader",
+    admin: "elder",
+  };
+
+  const memberRole = roleMap[info.member[i].role] || "member";
+
+
   playerList.innerHTML += `
     <li class="p-2 pb-2 flex w-full my-1 bg-base-100 shadow-sm rounded-box">
       <img src="

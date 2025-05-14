@@ -22,7 +22,7 @@
   
 <div class="swiper w-full py-3 mb-8">
   <div class="swiper-wrapper h-full py-2 px-1">
-    <div class="swiper-slide" data-swiper-autoplay="2000">
+    <div class="swiper-slide">
       <div class="card w-96 bg-base-100 card-md shadow-sm">
         <div class="card-body">
           <div id="clanLabel" class="flex justify-center gap-3 mb-2 pt-2">
@@ -81,12 +81,13 @@
       <h1 id="ongoingWarState" class="btn btn-neutral text-2xl font-medium">war state</h1>
         </div>
         
-      <div class="card w-96 bg-base-100 card-md shadow-sm mt-4">
-        <div class="card-body">
+      <div class="card w-96 bg-base-100 card-md shadow-sm mt-4 pb-0">
+        <div class="card-body pb-2">
           
       <div id="ongoingWarVersus" class="flex justify-between">
       </div>
-      
+      <div id="ongoingWarProgress" class="bg-base-200 rounded h-2"></div>
+      <div id="ongoingWarLeft"></div>
         </div>
       </div>
 <ul id="ongoingWarsPlayers" class="list bg-base-300 rounded-box max-h-[500px] overflow-y-scroll border border-base-300 shadow-md px-2 mx-2 py-2 my-5">
