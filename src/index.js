@@ -12,6 +12,12 @@ if(!navigator.userAgent.includes("Mobile")) {
   });
 }
 
+const savedTag = localStorage.getItem("clanTag");
+
+if(!savedTag || !savedTag.includes("#")) {
+  window.location.href = "/login";
+}
+
 // clan top info
 (async () => {
   const info = await clanInfo();

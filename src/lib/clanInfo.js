@@ -1,9 +1,11 @@
 import axios from "axios";
 const baseURL = import.meta.env.VITE_APIURL;
+const savedTag = encodeURIComponent(localStorage.getItem("clanTag"));
+
 
 async function clanInfo() {
   try {
-    const { data } = await axios.get(baseURL);
+    const { data } = await axios.get(`${baseURL}?tag=${savedTag}`);
 
     return {
       tag: data.tag,

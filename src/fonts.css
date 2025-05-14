@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'clashRegular';
+  src: url('./fonts/Clash_Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'clashBold';
+  src: url('./fonts/Clash_Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.text-clash {
+  font-family: clashRegular;
+}
+.text-clash-bold {
+  font-family: clashBold;
+}

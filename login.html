@@ -1,0 +1,53 @@
+<!doctype html>
+<html id="html" data-theme="bumblebee" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/index.css">
+  </head>
+  <body>
+  
+  <div class="flex justify-items-center justify-center mt-36"> 
+    <div class="card card-dash bg-base-100 w-96">
+  <div class="card-body">
+    <h2 class="card-title text-bold">Enter Clan Tag</h2>
+    <label class="input">
+      <input id="inputTag" placeholder="#..." class="w-full"/>
+      </label>
+    <div class="flex card-actions justify-end gap-4">
+      <button id="skipBtn" class="btn btn-neutral">Skip</button>
+      <button id="loginBtn" class="btn btn-primary">Login</button>
+    </div>
+  <p id="errorCheck" class="text-xs opacity-60 pt-4">
+  Press skip button for default clan "Kudus X-Bow"
+  </p>
+  </div>
+</div>
+</div>
+
+
+   <p class="mt-72 text-center opacity-50">
+     <a target="_blank" href="https://github.com/mininxd/coc-api">clans stats</a> - <a target="_blank" href="https://mininxd.vercel.app">mininxd.</a>
+      </p>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+</style>
+
+<script type="module">
+  skipBtn.addEventListener("click", () => {
+    localStorage.setItem("clanTag", "#YUJCC2RG");
+  })
+  
+  loginBtn.addEventListener("click", () => {
+    localStorage.setItem("clanTag", inputTag.value);
+    window.location.href = "/";
+  })
+  if(!localStorage.getItem("clanTag").includes("#")) {
+    errorCheck.innerHTML = "Clan tag needs a '#'!"
+    errorCheck.classList.add("text-center","text-red-500");
+  }
+  
+</script>
+  </body>
+  </html>

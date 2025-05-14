@@ -1,9 +1,10 @@
 import axios from "axios";
 const baseURL = import.meta.env.VITE_APIURL;
+const savedTag = encodeURIComponent(localStorage.getItem("clanTag"));
 
 async function ongoingWar() {
   try {
-    const { data } = await axios.get(`${baseURL}/war`);
+    const { data } = await axios.get(`${baseURL}/war?tag=${savedTag}`);
 
     return {
       state: data.state,
