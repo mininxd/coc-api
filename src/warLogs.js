@@ -27,42 +27,51 @@ import { logs } from "./lib/warInfo.js";
     totalWarlogs.innerHTML = `${win - lose - j}/${lose - j}`
     
     
-  warLogList.innerHTML += `
-  <div class="flex justify-between bg-base-100 shadow-sm rounded-box ${result} ${hideUndefinedOpponent} my-1 px-2">
-  
-  <div class="w-full flex justify-start">
-   <img src="${info.items[i].clan.badgeUrls.small}" class="w-[32px] h-[32px] mt-4 ml-[2px]">
-    <li class="list-row">
-    <div class="list-col-grow">
-      <div class="text-medium ${textColor}">
-        ${info.items[i].clan.name}
-      </div>
-      <div class="text-xs ${textColor} opacity-60">
-      <i class="ri-star-fill"></i> ${info.items[i].clan.stars} 
-      <span class="mx-[2px]"></span>
-      <i class="ri-sword-fill"></i>  ${info.items[i].clan.destructionPercentage.toFixed(2)}%
-      </div>
+warLogList.innerHTML += `
+  <div class="bg-base-100 shadow-sm rounded-box ${result} ${hideUndefinedOpponent} my-1 px-2">
+    <div class="flex justify-between mt-2 px-1 ${textColor} text-xs opacity-60">
+      <span>${info.items[i].clan.tag}</span>
+      <span>${info.items[i].opponent.tag}</span>
     </div>
-    </li>
-    </div>
+
+    <div class="flex justify-between mt-[-5px]">
     
-  <div class="w-full flex justify-end">
-    <li class="list-row">
-      <div class="list-col-grow">
-        <div class="text-medium ${textColor} text-right">
-        ${info.items[i].opponent.name}
-        </div>
-      <div class="text-xs text-right ${textColor} opacity-60">
-        <i class="ri-star-fill"></i> ${info.items[i].opponent.stars} 
-        <span class="mx-[2px]"></span>
-        <i class="ri-sword-fill"></i>         ${info.items[i].opponent.destructionPercentage.toFixed(2)}%
+      <!-- Clan -->
+      <div class="w-full flex justify-start mt-[-5px]">
+        <img src="${info.items[i].clan.badgeUrls.small}" class="w-[32px] h-[32px] mt-5 ml-[2px]">
+        <li class="list-row">
+          <div class="list-col-grow">
+            <div class="text-medium ${textColor}">
+              ${info.items[i].clan.name}
+            </div>
+            <div class="text-xs ${textColor} opacity-60">
+              <i class="ri-star-fill"></i> ${info.items[i].clan.stars}
+              <span class="mx-[2px]"></span>
+              <i class="ri-sword-fill"></i> ${info.items[i].clan.destructionPercentage.toFixed(2)}%
+            </div>
+          </div>
+        </li>
       </div>
-    </li>
-      <img src="${info.items[i].opponent.badgeUrls.small}" class="w-[32px] h-[32px] mt-4 mr-[4px]">
+
+      <!-- Opponent -->
+      <div class="w-full flex justify-end mt-[-5px]">
+        <li class="list-row">
+          <div class="list-col-grow">
+            <div class="text-medium ${textColor} text-right">
+              ${info.items[i].opponent.name}
+            </div>
+            <div class="text-xs text-right ${textColor} opacity-60">
+              <i class="ri-star-fill"></i> ${info.items[i].opponent.stars}
+              <span class="mx-[2px]"></span>
+              <i class="ri-sword-fill"></i> ${info.items[i].opponent.destructionPercentage.toFixed(2)}%
+            </div>
+          </div>
+        </li>
+        <img src="${info.items[i].opponent.badgeUrls.small}" class="w-[32px] h-[32px] mt-5 mr-[4px]">
+      </div>
     </div>
-  
-    
   </div>
-`
+`;
+
   }
 })()

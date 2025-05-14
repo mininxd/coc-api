@@ -42,7 +42,7 @@ let state = info.state;
             </div>
             <span class="mx-[2px]"></span>
             <div class="tooltip" data-tip="total destruction">
-              <i class="ri-sparkling-2-line"></i> ${info.clanDestruction}
+              <i class="ri-sparkling-2-line"></i> ${info.clanDestruction}%
             </div>
           </div>
         </div>
@@ -63,7 +63,7 @@ let state = info.state;
             </div>
             <span class="mx-[2px]"></span>
             <div class="tooltip" data-tip="total destruction">
-              <i class="ri-sparkling-2-line"></i> ${info.opponentDestruction}
+              <i class="ri-sparkling-2-line"></i> ${info.opponentDestruction}%
             </div>
           </div>
         </div>
