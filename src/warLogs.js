@@ -40,7 +40,7 @@ import { logs } from "./lib/warInfo.js";
       <div class="text-xs ${textColor} opacity-60">
       <i class="ri-star-fill"></i> ${info.items[i].clan.stars} 
       <span class="mx-[2px]"></span>
-      <i class="ri-sword-fill"></i>  ${info.items[i].opponent.destructionPercentage.toFixed(2)}%
+      <i class="ri-sword-fill"></i>  ${info.items[i].clan.destructionPercentage.toFixed(2)}%
       </div>
     </div>
     </li>
