@@ -14,11 +14,18 @@ app.use('/ping', pingRouter);
 
 const clanTag = process.env.CLAN_TAG;
 
+app.get('/', async (req, res) => {
+  const encodedTag = clanTag.replace('#', '%23');
+  
+  const headers = {
+  Authorization: `Bearer ${process.env.APIKEY}`
+  };
+  let {data} = await axios.get(`https://api.clashofclans.com/v1/clans/${encodedTag}`, {headers});
+  res.send(data);
+})
+
 app.get('/:tag', async (req, res) => {
     let tag = req.params.tag;
-  if (!tag) {
-    tag = clanTag;
-  }
   const encodedTag = tag.replace('#', '%23');
   
   const headers = {
@@ -29,9 +36,11 @@ app.get('/:tag', async (req, res) => {
 })
 
 
+/*
 app.use((req, res) => {
   res.redirect("/");
 });
+*/
 
 app.listen(3000, () => {
   console.log(`localhost:3000`);
