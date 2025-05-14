@@ -12,7 +12,7 @@ const endpoint = `https://api.clashofclans.com/v1/`
 
 router.get('/', async (req, res) => {
 try {
-  let {data} = await axios.get(`${endpoint}/warlog`,{headers});
+  let {data} = await axios.get(`${endpoint}`,{headers});
   console.log(data);
   res.send("200");
   } catch(e) {

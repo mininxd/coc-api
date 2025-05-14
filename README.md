@@ -5,6 +5,6 @@
 
    Deploy `main` Branch into VPS, and deploy `scrape` Branch to Vercel
 
-  also setup your `.env` by set your clan tag and apikey
+  also setup your `.env` and set apikey
 
 get your apikey right here https://developer.clashofclans.com/
