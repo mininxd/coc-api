@@ -5,6 +5,12 @@ import "./warLogs.js";
 import "./ongoingWar.js";
 import "./lib/swiper.js";
 
+if(!navigator.userAgent.includes("Mobile")) {
+  html.classList.add("px-48");
+  document.querySelectorAll(".card").forEach(card => {
+    card.classList.replace("w-96", "w-full");
+  });
+}
 
 // clan top info
 (async () => {
