@@ -7,4 +7,7 @@
 
   also setup your `.env` and set apikey
 
-get your apikey right here https://developer.clashofclans.com/
+get your APIKEY right here https://developer.clashofclans.com/
+
+and arcjet APIKEY (optional)
+https://app.arcjet.com/
