@@ -7,15 +7,14 @@ import ongoingWar from "./lib/ongoingWarInfo.js";
   const ongoingWarsPlayers = document.getElementById("ongoingWarsPlayers");
   const ongoingWarVersus = document.getElementById("ongoingWarVersus");
   
-let state = info.state;
- if(info.state == "inWar") {
-   state = "in war";
- } else if(info.state == "notInWar") {
-   state = "not war"
- } else if(info.state == "warEnded") {
-   state = "war ended"
- }
- 
+const stateMap = {
+  inWar: "in war",
+  notInWar: "not war",
+  warEnded: "war ended"
+};
+
+let state = stateMap[info.state];
+
  let clanName = info.clanName;
  let opponentName = info.opponentName;
  
@@ -73,12 +72,21 @@ let state = info.state;
   </div>
 `;
 
-ongoingWarProgress.innerHTML = `
-  <div class="w-full h-2 flex rounded overflow-hidden">
-    <div class="bg-success" style="width: calc(${info.clanDestruction} / (${info.clanDestruction} + ${info.opponentDestruction}) * 100%)"></div>
-    <div class="bg-error" style="width: calc(${info.opponentDestruction} / (${info.clanDestruction} + ${info.opponentDestruction}) * 100%)"></div>
+const clanHead = (
+  (info.clanDestruction / (info.clanDestruction + info.opponentDestruction)) * 100
+).toFixed(1);
+
+const opponentHead = (info.opponentDestruction / (info.clanDestruction + info.opponentDestruction) * 100).toFixed(1);
+
+ongoingWarProgress.innerHTML = `            
+  <div class="w-full h-[8px] flex rounded overflow-hidden">
+    <div class="bg-success" style="width: ${clanHead}%"></div>
+    <div class="bg-error" style="width: ${opponentHead}%"></div>
   </div>
 `;
+ongoingWarProgress.setAttribute("data-tip", `
+${clanHead}%  -  ${opponentHead}%
+`)
 
   
 for (let i = 0; i < info.clanMember.length; i++) {

@@ -12,8 +12,12 @@
 }
 
 .text-clash {
-  font-family: clashRegular;
+  font-family: clashRegular !important;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: black;
 }
 .text-clash-bold {
-  font-family: clashBold;
+  font-family: clashBold !important;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: black;
 }

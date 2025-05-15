@@ -62,3 +62,8 @@ if(!savedTag || !savedTag.includes("#")) {
       </div>
   `
 })()
+
+
+function copyText(text) {
+  navigator.clipboard.writeText(text);
+}
