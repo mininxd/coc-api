@@ -43,7 +43,7 @@ warLogList.innerHTML += `
         <img src="${info.items[i].clan.badgeUrls.small}" class="w-[32px] h-[32px] mt-5 ml-[2px]">
         <li class="list-row">
           <div class="list-col-grow">
-            <div class="text-white text-clash-bold ${fontDesktop}">
+            <div class="text-white text-clash-bold text-clash-shadow-sm ${fontDesktop}">
               ${info.items[i].clan.name}
             </div>
             <div class="text-xs opacity-80">
@@ -59,7 +59,7 @@ warLogList.innerHTML += `
       <div class="w-full flex justify-end mt-[-5px]">
         <li class="list-row">
           <div class="list-col-grow">
-            <div class="text-white text-clash-bold text-right ${fontDesktop}">
+            <div class="text-white text-clash-bold text-clash-shadow-sm text-right ${fontDesktop}">
               ${info.items[i].opponent.name}
             </div>
             <div class="text-xs text-right opacity-80">

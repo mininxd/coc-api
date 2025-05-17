@@ -61,6 +61,16 @@ if(!savedTag || !savedTag.includes("#")) {
       ${info.capitalLeague.name}
       </div>
   `
+  joinClan.innerHTML = `
+   <a class="flex justify-center w-full mt-2" href="clashofclans://action=OpenClanProfile&tag=${info.tag}">
+    <button class="btn btn-neutral rounded-md w-full text-2xl text-clash text-clash-shadow-md text-white shadow-md">Join Clan</button>
+   </a> 
+  `
+  resetBtn.classList.remove("hidden");
+  resetBtn.addEventListener("click", () => {
+    localStorage.removeItem("clanTag");
+    window.location.href = "/";
+  })
 })()
 
 

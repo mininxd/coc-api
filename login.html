@@ -41,11 +41,20 @@ for Development Purpose -->
     localStorage.setItem("clanTag", inputTag.value);
     window.location.href = "/";
   })
-  if(!localStorage.getItem("clanTag").includes("#")) {
-    errorCheck.innerHTML = "Clan tag needs a '#'!"
-    errorCheck.classList.add("text-center","text-red-500");
-  }
-  
+
+const clanTagStorage = localStorage.getItem("clanTag");
+
+if (clanTagStorage.includes("404_NotFound")) {
+  errorCheck.innerHTML = "Clan not found!";
+  errorCheck.classList.add("text-center", "text-red-500");
+  localStorage.removeItem("clanTag");
+} else if (!clanTagStorage.includes("#")) {
+  errorCheck.innerHTML = "Clan tag need a '#'";
+  errorCheck.classList.add("text-center", "text-red-500");
+}
+
+
+
 </script>
   </body>
   </html>

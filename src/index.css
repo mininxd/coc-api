@@ -46,3 +46,10 @@ html {
   font-weight: 900;
   font-style: normal;
 }
+.btn:focus, .btn:active {
+  filter: brightness(0.85) !important;
+}
+
+.btn-ghost {
+  background: #f2f2f2;
+}

@@ -6,7 +6,7 @@ const savedTag = encodeURIComponent(localStorage.getItem("clanTag"));
 async function clanInfo() {
   try {
     const { data } = await axios.get(`${baseURL}?tag=${savedTag}`);
-
+    
     return {
       tag: data.tag,
       name: data.name,
@@ -31,6 +31,8 @@ async function clanInfo() {
 
   } catch (err) {
     console.error("Failed to fetch clan data:", err.message);
+    localStorage.setItem("clanTag", "404_NotFound");
+    window.location.href = "/";
     return null;
   }
 }

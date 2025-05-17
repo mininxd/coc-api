@@ -21,3 +21,9 @@
   -webkit-text-stroke-width: 0.5px;
   -webkit-text-stroke-color: black;
 }
+.text-clash-shadow-sm {
+  text-shadow: 0px 2px #000;
+}
+.text-clash-shadow-md {
+  text-shadow: 0px 3px #000;
+}
