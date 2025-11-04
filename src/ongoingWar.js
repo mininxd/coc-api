@@ -53,16 +53,16 @@ let state = stateMap[info.state];
         <div class="list-col-grow">
           ${opponentName}
           <div class="text-xs flex gap-1 justify-end mt-1">
-            <div class="tooltip" data-tip="total stars">
-              <i class="ri-star-line"></i> ${info.opponentStars}
+            <div class="tooltip" data-tip="total destruction">
+              <i class="ri-sparkling-2-line"></i> ${info.opponentDestruction}%
             </div>
             <span class="mx-[2px]"></span>
             <div class="tooltip" data-tip="total attacks">
               <i class="ri-sword-line"></i> ${info.opponentAttacks}
             </div>
             <span class="mx-[2px]"></span>
-            <div class="tooltip" data-tip="total destruction">
-              <i class="ri-sparkling-2-line"></i> ${info.opponentDestruction}%
+            <div class="tooltip" data-tip="total stars">
+              <i class="ri-star-line"></i> ${info.opponentStars}
             </div>
           </div>
         </div>

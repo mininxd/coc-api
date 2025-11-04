@@ -5,7 +5,11 @@ const savedTag = encodeURIComponent(localStorage.getItem("clanTag"));
 async function ongoingWar() {
   try {
     const { data } = await axios.get(`${baseURL}/clans/${savedTag}/currentwar`);
-
+    
+    if(data.state === "notInWar") {
+      currentWar_msg.innerHTML = "Ongoing war league may not displayed,<br>during this menu only records for normal current war"
+    }
+    
     return {
       state: data.state,
       teamSize: data.teamSize,
