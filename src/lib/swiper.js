@@ -4,4 +4,7 @@ import 'swiper/css/bundle';
 const swiper = new Swiper('.swiper', {
   direction: 'horizontal',
   loop: true,
+  centeredSlidesBounds: true,
+  grabCursor:true,
+  observer: true
 });

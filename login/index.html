@@ -36,11 +36,18 @@
   })
   
   loginBtn.addEventListener("click", () => {
-    localStorage.setItem("clanTag", inputTag.value);
+    let tag = inputTag.value.trim();
+    // Normalize the tag to ensure it starts with #
+    if (tag && !tag.startsWith('#')) {
+      tag = '#' + tag;
+    }
+    localStorage.setItem("clanTag", tag);
     window.location.href = "/";
   })
-  if(!localStorage.getItem("clanTag").includes("#")) {
-    errorCheck.innerHTML = "Clan tag needs a '#'!"
+  const storedTag = localStorage.getItem("clanTag");
+  // Allow tags with or without # but make sure they exist and are not empty
+  if(!storedTag || storedTag.trim() === "" || storedTag.trim() === "#") {
+    errorCheck.innerHTML = "Please enter a valid clan tag!"
     errorCheck.classList.add("text-center","text-red-700");
   }
   

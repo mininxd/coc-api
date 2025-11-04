@@ -5,7 +5,7 @@ const savedTag = encodeURIComponent(localStorage.getItem("clanTag"));
 
 async function clanInfo() {
   try {
-    const { data } = await axios.get(`${baseURL}?tag=${savedTag}`);
+    const { data } = await axios.get(`${baseURL}/clans/${savedTag}`);
     
     return {
       tag: data.tag,

@@ -4,7 +4,7 @@ const savedTag = encodeURIComponent(localStorage.getItem("clanTag"));
 
 async function ongoingWar() {
   try {
-    const { data } = await axios.get(`${baseURL}/war?tag=${savedTag}`);
+    const { data } = await axios.get(`${baseURL}/clans/${savedTag}/currentwar`);
 
     return {
       state: data.state,
