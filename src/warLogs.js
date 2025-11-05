@@ -39,17 +39,17 @@ import time from "./lib/libTime.js";
 
         <div class="flex justify-between mt-2">
           <div class="w-full flex justify-start mt-[-5px]">
-            <img class="h-[32px] w-[32px]" src="${info.items[i].clan.badgeUrls.small}">
-            <div class="font-bold text-2xl ${contentColor}">
+            <img class="h-[32px] w-[32px]" src="${info.items[i].clan.badgeUrls.medium}">
+            <div class="font-bold text-3xl px-1 ${contentColor}">
               ${info.items[i].clan.stars}
             </div>
           </div>
     ${info.items[i].teamSize}v${info.items[i].teamSize}
           <div class="w-full flex justify-end mt-[-5px]">
-            <div class="font-bold text-2xl ${contentColor}">
+            <div class="font-bold text-3xl px-1 ${contentColor}">
               ${info.items[i].opponent.stars}
             </div>
-            <img src="${info.items[i].opponent.badgeUrls.small}" class="w-[32px] h-[32px]">
+            <img src="${info.items[i].opponent.badgeUrls.medium}" class="w-[32px] h-[32px]">
           </div>
         </div>
       
