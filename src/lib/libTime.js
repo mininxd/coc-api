@@ -24,3 +24,22 @@ export default function timeAgo(setTime, now = new Date()) {
     return `${diffMonth} month${diffMonth !== 1 ? "s" : ""} ago`;
   return `${diffYear} year${diffYear !== 1 ? "s" : ""} ago`;
 }
+
+export const formatDate = (dateString) => {
+        const monthNames = [
+          "January", "February", "March", "April", "May", "June",
+          "July", "August", "September", "October", "November", "December"
+        ];
+        
+        try {
+          const date = new Date(dateString);
+          if (isNaN(date.getTime())) {
+            const year = dateString.substring(0, 4);
+            const month = parseInt(dateString.substring(4, 6), 10) - 1; 
+            const day = dateString.substring(6, 8);
+            return `${day}/${monthNames[month]}/${year}`;
+          }
+        } catch (e) {
+          return ""
+        }
+      };

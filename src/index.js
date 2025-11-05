@@ -2,6 +2,7 @@ import clanInfo from "./lib/clanInfo.js";
 import 'remixicon/fonts/remixicon.css'
 import "./playerList.js";
 import "./warLogs.js";
+import "./clanRaid.js";
 import "./ongoingWar.js";
 import "./lib/swiper.js";
 

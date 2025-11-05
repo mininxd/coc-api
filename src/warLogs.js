@@ -30,7 +30,7 @@ import time from "./lib/libTime.js";
     }
 
     warLogList.innerHTML += `
-      <div class="bg-base-100 shadow-lg border rounded-box ${result} my-1 px-2">
+      <div class="bg-base-100 shadow-lg rounded-box ${result} my-1 px-2">
         <div class="flex justify-between mt-1 text-lg">
           <span class="text-white text-clash-bold text-clash-shadow-sm text-sm ${fontDesktop}">${info.items[i].clan.name}</span>
 

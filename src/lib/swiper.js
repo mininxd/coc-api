@@ -6,5 +6,6 @@ const swiper = new Swiper('.swiper', {
   loop: true,
   centeredSlidesBounds: true,
   grabCursor:true,
-  observer: true
+  observer: true,
+  nested:true
 });
